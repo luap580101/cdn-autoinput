@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .login-container {
+        text-align: center;
+      }
+      input {
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 16px;
+        width: 200px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Login</h1>
+      <input type="text" id="username" placeholder="Enter your username" />
+      <br />
+      <button onclick="handleLogin()">Login</button>
+    </div>
+
+    <script>
+      function handleLogin() {
+        // 獲取輸入框的值
+        const username = document.getElementById("username").value;
+
+        // 顯示帳號
+        if (username) {
+          window.alert(`Your username is: ${username}`);
+        } else {
+          window.alert("Please enter a username!");
+        }
+      }
+    </script>
+    <script src="http://localhost:3000/static/cdnAutoInput.js"></script>
+  </body>
+</html>
